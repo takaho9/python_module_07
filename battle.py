@@ -1,7 +1,7 @@
 from ex0 import CreatureFactory, FlameFactory, AquaFactory
 
 
-def single(factory: CreatureFactory):
+def single(factory: CreatureFactory) -> None:
     print("Testing factory")
 
     base = factory.create_base()
@@ -13,7 +13,7 @@ def single(factory: CreatureFactory):
     print(evolved.attack())
 
 
-def battle(factory1: CreatureFactory, factory2: CreatureFactory):
+def battle(factory1: CreatureFactory, factory2: CreatureFactory) -> None:
     print("Testing battle")
     base1 = factory1.create_base()
     base2 = factory2.create_base()

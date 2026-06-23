@@ -2,12 +2,12 @@ from abc import ABC, abstractmethod
 
 
 class Creature(ABC):
-    def __init__(self, name: str, type: str) -> None:
-        self.name = name
-        self.type = type
+    def __init__(self, name: str, creature_type: str) -> None:
+        self._name = name
+        self._type = creature_type
 
     def describe(self) -> str:
-        return f"{self.name} is a {self.type} type Creature"
+        return f"{self._name} is a {self._type} type Creature"
 
     @abstractmethod
     def attack(self) -> str:
@@ -16,19 +16,19 @@ class Creature(ABC):
 
 class Flameling(Creature):
     def attack(self) -> str:
-        return f"{self.name} uses Ember!"
+        return f"{self._name} uses Ember!"
 
 
 class Pyrodon(Creature):
     def attack(self) -> str:
-        return f"{self.name} uses Flamethrower!"
+        return f"{self._name} uses Flamethrower!"
 
 
 class Aquabub(Creature):
     def attack(self) -> str:
-        return f"{self.name} uses Water Gun!"
+        return f"{self._name} uses Water Gun!"
 
 
 class Torragon(Creature):
     def attack(self) -> str:
-        return f"{self.name} uses Hydro Pump!"
+        return f"{self._name} uses Hydro Pump!"
