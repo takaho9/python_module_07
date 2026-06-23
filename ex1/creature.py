@@ -1,4 +1,3 @@
-
 from .capability import HealCapability, TransformCapability
 from ex0 import Creature
 
@@ -34,10 +33,10 @@ class Shiftling(Creature, TransformCapability):
 
     def transform(self) -> str:
         if self._transformed:
-            return f"{self._name} cannot be transformed"
+            return f"{self._name} cannot be transformed."
         else:
             self._transformed = True
-            return f"{self._name} shifts into a a sharper form!"
+            return f"{self._name} shifts into a sharper form!"
 
     def revert(self) -> str:
         if self._transformed:
@@ -45,7 +44,6 @@ class Shiftling(Creature, TransformCapability):
             return f"{self._name} returns to normal."
         else:
             return f"{self._name} cannot be reverted."
-
 
 
 class Morphagon(Creature, TransformCapability):
@@ -61,14 +59,14 @@ class Morphagon(Creature, TransformCapability):
 
     def transform(self) -> str:
         if self._transformed:
-            return f"{self._name} cannot be transformed"
+            return f"{self._name} cannot be transformed."
         else:
             self._transformed = True
-            return f"{self._name} shifts into a a dragonic battle form!"
+            return f"{self._name} morphs into a dragonic battle form!"
 
     def revert(self) -> str:
         if self._transformed:
             self._transformed = False
             return f"{self._name} stabilizes its form."
         else:
-            return f"{self._name} cannot be reverted"
+            return f"{self._name} cannot be reverted."

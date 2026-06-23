@@ -1,7 +1,5 @@
-from abc import ABC, abstractmethod
 from ex0 import CreatureFactory
 from .creature import Sproutling, Bloomelle, Shiftling, Morphagon
-
 
 
 class HealingCreatureFactory(CreatureFactory):
@@ -10,7 +8,6 @@ class HealingCreatureFactory(CreatureFactory):
 
     def create_evolved(self) -> Bloomelle:
         return Bloomelle("Bloomelle", "Grass/Fairy")
-
 
 
 class TransformCreatureFactory(CreatureFactory):

@@ -3,16 +3,18 @@ from abc import ABC, abstractmethod
 
 class HealCapability(ABC):
     @abstractmethod
-    def heal() -> str:
+    def heal(self) -> str:
         pass
+
+
 class TransformCapability(ABC):
     def __init__(self) -> None:
         self._transformed = False
 
     @abstractmethod
-    def transform() -> str:
+    def transform(self) -> str:
         pass
 
     @abstractmethod
-    def revert() -> str:
+    def revert(self) -> str:
         pass
