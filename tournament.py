@@ -10,7 +10,8 @@ from ex2 import BattleStrategy, \
 def battle(
     a: tuple[CreatureFactory, BattleStrategy],
     b: tuple[CreatureFactory, BattleStrategy]
-):
+) -> None:
+    print()
     print("* Battle *")
     factory_a, strategy_a = a
     factory_b, strategy_b = b
@@ -45,6 +46,7 @@ def main() -> None:
     except StrategyError as e:
         print(f"Battle error, aborting tournament: {e}")
 
+    print()
     print("Tournament 1 (error)")
     opponents = [
         (FlameFactory(), AggressiveStrategy()),
@@ -56,6 +58,7 @@ def main() -> None:
     except StrategyError as e:
         print(f"Battle error, aborting tournament: {e}")
 
+    print()
     print("Tournament 2 (multiple)")
     opponents = [
         (AquaFactory(), NormalStrategy()),

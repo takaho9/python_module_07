@@ -23,7 +23,7 @@ class NormalStrategy(BattleStrategy):
         if not self.is_valid(creature):
             raise StrategyError(
                 f"Invalid Creature '{creature.name}'"
-                "for this Normal strategy"
+                " for this Normal strategy"
             )
         else:
             print(creature.attack())
@@ -37,7 +37,7 @@ class AggressiveStrategy(BattleStrategy):
         if not self.is_valid(creature):
             raise StrategyError(
                 f"Invalid Creature '{creature.name}'"
-                "for this aggressive strategy"
+                " for this aggressive strategy"
             )
         else:
             transformer = cast(TransformCapability, creature)
@@ -54,7 +54,7 @@ class DefensiveStrategy(BattleStrategy):
         if not self.is_valid(creature):
             raise StrategyError(
                 f"Invalid Creature '{creature.name}'"
-                "for this defensive strategy"
+                " for this defensive strategy"
             )
         else:
             defence = cast(HealCapability, creature)
