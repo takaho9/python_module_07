@@ -5,19 +5,19 @@ from ex0.creature import Creature
 class Sproutling(Creature, HealCapability):
 
     def attack(self) -> str:
-        return f"{self._name} uses Vine Whip!"
+        return f"{self.name} uses Vine Whip!"
 
     def heal(self) -> str:
-        return f"{self._name} heals itself for a small amount"
+        return f"{self.name} heals itself for a small amount"
 
 
 class Bloomelle(Creature, HealCapability):
 
     def attack(self) -> str:
-        return f"{self._name} uses Petal Dance!"
+        return f"{self.name} uses Petal Dance!"
 
     def heal(self) -> str:
-        return f"{self._name} heals itself and others for a large amount"
+        return f"{self.name} heals itself and others for a large amount"
 
 
 class Shiftling(Creature, TransformCapability):
@@ -27,23 +27,23 @@ class Shiftling(Creature, TransformCapability):
 
     def attack(self) -> str:
         if self._transformed:
-            return f"{self._name} performs a boosted strike!"
+            return f"{self.name} performs a boosted strike!"
         else:
-            return f"{self._name} attacks normally."
+            return f"{self.name} attacks normally."
 
     def transform(self) -> str:
         if self._transformed:
-            return f"{self._name} cannot be transformed."
+            return f"{self.name} cannot be transformed."
         else:
             self._transformed = True
-            return f"{self._name} shifts into a sharper form!"
+            return f"{self.name} shifts into a sharper form!"
 
     def revert(self) -> str:
         if self._transformed:
             self._transformed = False
-            return f"{self._name} returns to normal."
+            return f"{self.name} returns to normal."
         else:
-            return f"{self._name} cannot be reverted."
+            return f"{self.name} cannot be reverted."
 
 
 class Morphagon(Creature, TransformCapability):
@@ -53,20 +53,20 @@ class Morphagon(Creature, TransformCapability):
 
     def attack(self) -> str:
         if self._transformed:
-            return f"{self._name} unleashes a devastating morph strike!"
+            return f"{self.name} unleashes a devastating morph strike!"
         else:
-            return f"{self._name} attacks normally."
+            return f"{self.name} attacks normally."
 
     def transform(self) -> str:
         if self._transformed:
-            return f"{self._name} cannot be transformed."
+            return f"{self.name} cannot be transformed."
         else:
             self._transformed = True
-            return f"{self._name} morphs into a dragonic battle form!"
+            return f"{self.name} morphs into a dragonic battle form!"
 
     def revert(self) -> str:
         if self._transformed:
             self._transformed = False
-            return f"{self._name} stabilizes its form."
+            return f"{self.name} stabilizes its form."
         else:
-            return f"{self._name} cannot be reverted."
+            return f"{self.name} cannot be reverted."
