@@ -31,6 +31,7 @@ def main() -> None:
     print()
     aqua_factory = AquaFactory()
     single(aqua_factory)
+    print()
     battle(flame_factory, aqua_factory)
 
 
